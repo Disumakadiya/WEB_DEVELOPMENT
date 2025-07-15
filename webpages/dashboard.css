@@ -1,0 +1,213 @@
+header {
+  background-color: #002855;
+  color: white;
+  padding: 15px 40px;
+}
+/* 🌍 Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🚀 Ensure full page fills viewport */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* 💥 Stops horizontal white scroll */
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #eaf4ff;
+}
+header, footer {
+  width: 100%;
+  background-color: #002855;
+  color: white;
+  padding: 15px 40px;
+}
+/* 🔵 Header Layout */
+.header-grid {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-grid img {
+  width: 60px;
+  height: 60px;
+}
+
+.header-grid h1 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 auto; /* center text */
+}
+
+
+/* 🧭 Navbar using Flex
+nav {
+  background-color: #004080;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 40px;
+  gap: 30px;
+}
+
+/* 🔗 Navbar Links */
+/* nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  position: relative;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffd700;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+} */ 
+ nav {
+  background-color: #004080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  position: relative;
+}
+
+.dashboard-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  animation: slideInLeft 1s ease-out;
+  color: #ffd700;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffd700;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+
+/* 🧱 Dashboard Grid Layout */
+.dashboard-container {
+  padding: 40px;
+  background-color: #f0f8ff;
+  min-height: 80vh;
+}
+.dashboard-content {
+  min-height: calc(100vh - 130px); /* 130 = header + footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.dashboard-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #002855;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border: 2px solid #004080;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  font-size: 1.1em;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.card a {
+  color: #004080;
+  text-decoration: none;
+}
+.card a:hover {
+  text-decoration: underline;
+}
+
+
+/* 🔽 Footer */
+footer {
+  background-color: #002855;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+}
+
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - CHARUSAT</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+  <!-- 🔼 Header -->
+  <header>
+    <div class="header-grid">
+      <img src="University_logo.png" alt="Charusat Logo">
+      <h1>CHARUSAT UNIVERSITY</h1>
+    </div>
+  </header>
+
+  <!-- 📋 Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    <div class="enquire-box">Enquire Now - Admission 2025</div>
+  </nav>
+
+ <main class="register-grid">
+  <div class="register-form">
+    <fieldset>
+      <legend>Register Yourself</legend>
+      <form action="login_img.png" method="POST">
+        <div class="form-row">
+          <div>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" required>
+          </div>
+          <div>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required>
+          </div>
+        </div>
+
+        <label for="email">Username</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="cpassword">Confirm Password</label>
+        <input type="password" id="cpassword" name="cpassword" required>
+
+        <div class="form-row checkbox">
+          <input type="checkbox" id="forgot" name="forgot">
+          <label for="forgot">Remember me for future logins</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Create Account</button>
+      </form>
+    </fieldset>
+  </div>
+</main>
+  <!-- 🔽 Footer -->
+  <footer>
+    © 2025 CHARUSAT University. All rights reserved.
+  </footer>
+
+</body>
+</html>
