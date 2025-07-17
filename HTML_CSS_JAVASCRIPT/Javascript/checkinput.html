@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Validation</title>
+</head>
+<body style="font-family:Arial; text-align:center; margin-top:30px;">
+
+  <h2>Simple Form with JS Validation </h2>
+
+  <input type="text" id="n1" placeholder="Enter Number1" onblur="getText()" />
+  <span id="msg1" style="color:red; font-weight:bold;"></span><br><br>
+
+  <input type="text" id="n2" placeholder="Enter Number2" onblur="getText()" />
+  <span id="msg2" style="color:red; font-weight:bold;"></span><br><br>
+
+  <input type="text" id="n3" placeholder="Result" readonly/>
+  <br><br>
+
+  <p id="p1" style="color:#333; font-size:16px;">
+    This is a static form of HTML with basic JS functions.
+  </p>
+
+  <script>
+    function getText() {
+      var n1 = document.getElementById('n1').value;
+      var n2 = document.getElementById('n2').value;
+
+      let error1 = document.getElementById('msg1');
+      let error2 = document.getElementById('msg2');
+      let resultBox = document.getElementById('n3');
+      let message = document.getElementById('p1');
+
+      // Reset all spans
+      error1.innerHTML = "";
+      error2.innerHTML = "";
+      resultBox.value = "";
+
+      if (n1 === "" && n2 === "") {
+        error1.innerHTML = " Number1 required!";
+        error2.innerHTML = " Number2 required!";
+        message.innerHTML = " Please fill all inputs!";
+        message.style.color = "red";
+      } else if (n1 === "") {
+        error1.innerHTML = " Number1 required!";
+        message.innerHTML = " Input missing!";
+        message.style.color = "red";
+      } else if (n2 === "") {
+        error2.innerHTML = " Number2 required!";
+        message.innerHTML = " Input missing!";
+        message.style.color = "red";
+      } else {
+        let num1 = Number(n1);
+        let num2 = Number(n2);
+        resultBox.value = num1 + num2;
+        message.innerHTML = " Form submitted successfully!";
+        message.style.color = "#AB01CA";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+        <input type="text" id="n1" placeholder="Enter Number1"/>  <br> <br>
+          <input type="text" id="n2" placeholder="Enter Number2" onblur="getText()"/>  <br><br>
+            <input type="text" id="n3" placeholder="Enter Number3" />
+
+            <!-- <input type ="button " value ="Click" onclick="getText()"/> -->
+  <script>
+
+  function getText()
+  {
+    var n1=parseInt(document.getElementById('n1').value);
+    var n2=parseInt(document.getElementById('n2').value);
+
+    document.getElementById('n3').value=n1+n2;
+    // console.log(n1 + " "+n2);
+    document.getElementById('p1').style.color="#AB01CA";
+    document.getElementById('p1').innerHTML="Form submitted successfully";
+  }
+  </script>
+  <p id="p1">
+    This is Static form of html with basic funciton addded of js.
+  </p>
+</body>
+</html>
+<!-- //typecast karvu padse by parsec as text box by default lai lese as string so concate thase-parsec functon che
+//on blur()---  outfocus uper function call karvanu
+//on click()--- -->
+<!-- //when type in text then funciton  call should come -->
+ <!-- input string should  be added when side ma avse incorrect input -textbox ni bajuma value joi che  -->
