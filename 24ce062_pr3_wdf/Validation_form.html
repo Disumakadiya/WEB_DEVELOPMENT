@@ -30,28 +30,36 @@
         <div class="form-row">
           <div>
             <label for="fullname">Full Name</label>
-            <input type="text" placeholder="Enter your full name" name="fullname" required>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            <span id="fullnameError" class="error-message"></span>//form name and all elements name in all
           </div>
           <div>
+            
             <label for="studentid">Student ID Number</label>
-            <input type="text" placeholder="Enter student ID nOo" name="studentid" required>
+            <input type="text" id="studentid" name="studentid" placeholder="Enter student ID " required>
+            <span id="studentidError" class="error-message"></span>
           </div>
         </div>
 
         <label for="email">Email</label>
-        <input type="email" placeholder="Enter your email" name="email" required>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <span id="emailError" class="error-message"></span>
 
         <label for="username">Username</label>
-        <input type="text" placeholder="Enter your username" name="username" required>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <span id="usernameError" class="error-message"></span>
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Enter your password" name="password" required>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <span id="passwordError" class="error-message"></span>
 
-        <label for="cpassword">Confirm Password</label>
-        <input type="password" placeholder="Confirm your password" name="cpassword" required>
+        <label for="confirmpassword">Confirm Password</label>
+        <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm your password" required>
+        <span id="confirmpasswordError" class="error-message"></span>
 
         <label for="phone">Phone Number</label>
-        <input type="tel" placeholder="Enter your phone number" name="phone" pattern="[0-9]{10}" required>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+        <span id="phoneError" class="error-message"></span>
 
         <div class="form-row checkbox">
           <input type="checkbox" id="forgot" name="forgot">
@@ -59,6 +67,8 @@
         </div>
 
         <button type="submit" class="submit-btn">Create Account</button>
+        <div id="successMessage"></div>
+        <div id="displayData"></div>
       </form>
     </fieldset>
   </div>
