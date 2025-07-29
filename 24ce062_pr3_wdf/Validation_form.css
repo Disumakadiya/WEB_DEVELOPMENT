@@ -91,6 +91,7 @@ nav a:hover {
 }
 
 .register-grid {
+  /* revert to previous styles */
   background-image: url("login_img.png");
   background-size: cover;
   background-position: center;
@@ -116,7 +117,8 @@ nav a:hover {
 
 /* 📝 Right-side form container */
 .register-form {
-  background: rgba(255, 255, 255, 0.95); /* only form has white background */
+  /* revert to previous styles */
+  background: rgba(255, 255, 255, 0.95);
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -257,6 +259,18 @@ footer {
   header .header-grid {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .register-grid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .register-form {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
   }
 }
 
