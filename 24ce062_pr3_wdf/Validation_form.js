@@ -84,22 +84,51 @@ window.onload = function ()
   }
 
   function displayFormData() {
-    const output = document.getElementById("displayData");
-    output.innerHTML = `
-      <div class="success-display">
-        <h3>✅ Registration Summary:</h3>
-        <ul>
-          <li><strong>Full Name:</strong> ${document.getElementById("fullname").value}</li>
-          <li><strong>Email:</strong> ${document.getElementById("email").value}</li>
-          <li><strong>Username:</strong> ${document.getElementById("username").value}</li>
-          <li><strong>Phone:</strong> ${document.getElementById("phone").value}</li>
-          <li><strong>Student ID:</strong> ${document.getElementById("studentid").value}</li>
-        </ul>
-      </div>
-    `;
+    let modal = document.getElementById("displayModal");
+    if (!modal) {
+      modal = document.createElement("div");
+      modal.id = "displayModal";
+      modal.innerHTML = `
+        <div class="modal-content">
+          <button id="closeModalBtn" class="close-modal-btn">&times;</button>
+          <div id="modalLoading"></div>
+          <ul id="modalDataList" style="display:none;"></ul>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      document.getElementById("closeModalBtn").onclick = function() {
+        modal.style.display = "none";
+      };
+    }
+    // Show loading message
+    const loadingDiv = modal.querySelector("#modalLoading");
+    const dataList = modal.querySelector("#modalDataList");
+    loadingDiv.innerHTML = '<h3 style="text-align:center;">Loading...</h3>';
+    dataList.style.display = 'none';
+    modal.style.display = "flex";
+
+    // Gather data (excluding password and phone)
+    const fullname = document.getElementById("fullname").value;
+    const email = document.getElementById("email").value;
+    const username = document.getElementById("username").value;
+    const studentid = document.getElementById("studentid").value;
+    // Log details to console
+    console.log({ fullname, email, username, studentid });
+
+    // After 1.5s, show the details block
+    setTimeout(() => {
+      loadingDiv.innerHTML = '<h3>✅ Registration Details</h3>';
+      dataList.innerHTML = `
+        <li><strong>Full Name:</strong> ${fullname}</li>
+        <li><strong>Email:</strong> ${email}</li>
+        <li><strong>Username:</strong> ${username}</li>
+        <li><strong>Student ID:</strong> ${studentid}</li>
+      `;
+      dataList.style.display = 'block';
+    }, 1500);
   }
 
-  // Add CSS styles for error messages if not already added
+  // Add CSS styles for error messages and modal if not already added
   if (!document.getElementById("input-error-message-style")) {
     const style = document.createElement("style");
     style.id = "input-error-message-style";
@@ -122,7 +151,41 @@ window.onload = function ()
         margin-top: 15px;
         border-radius: 8px;
       }
+      #displayModal {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.4);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      .modal-content {
+        background: #fff;
+        padding: 32px 28px 24px 28px;
+        border-radius: 14px;
+        min-width: 320px;
+        max-width: 90vw;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        position: relative;
+        animation: fadeInModal 0.4s;
+      }
+      .close-modal-btn {
+        position: absolute;
+        top: 10px;
+        right: 16px;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #e53e3e;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      @keyframes fadeInModal {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
     `;
-     document.head.appendChild(style);
+    document.head.appendChild(style);
   }
 };
