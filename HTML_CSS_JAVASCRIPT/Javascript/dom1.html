@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+</head>
+<body>
+  <h3 id="head">Today's date is</h3>
+  
+  <button id="btn">Click here</button><br><br>
+  <button id="btn1">Click here to add a paragraph</button><br><br>
+  <button id="btn2">Remove  paragraph</button><br>
+
+  <script>
+    const h3 = document.getElementById("head");
+    const btn = document.getElementById("btn");
+    const btn1 = document.getElementById("btn1");
+    const btn2 = document.getElementById("btn2");
+
+    
+    btn.addEventListener("click", function () {
+      h3.textContent = `Today's date is ${new Date().toLocaleDateString()}`;
+      const para = document.createElement("p");
+      para.className = "p1";
+      para.textContent = "This is a new paragraph added to the body.";
+      document.body.appendChild(para);
+    });
+
+   
+    btn1.addEventListener("click", () => {
+      const para = document.createElement("p");
+      para.className = "p1";
+      para.textContent = "This is a new paragraph added to the body.";
+      document.body.appendChild(para);
+    });
+
+    // The following code removes all paragraphs with class "p1"
+    // Uncomment the code below to remove all paragraphs when btn2 is clicked
+    // btn2.addEventListener("click", () => {
+    //   const paras = document.querySelectorAll(".p1"); 
+    //   if (paras.length > 0) {
+    //     paras.forEach((p) => p.remove()); 
+    //   } else {
+    //     alert("No paragraphs to remove");
+    //   }
+    // });
+
+    btn2.addEventListener("click", () => {
+      const paras = document.querySelectorAll(".p1");
+      if (paras.length > 0) {
+        paras[paras.length - 1].remove();
+      } else {
+        alert("No paragraphs to remove");
+      }
+    });
+  </script>
+</body>
+</html>
+<!-- //for in and for of ----for array to not check for increment and decrement -->
