@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id ="u1"></ul>
+
+<script>
+    const arr = [
+        {
+            id:101,
+            name:'Mobile',
+            quantity:100,
+            price:100000
+        },
+        {
+            id:102,
+            name:'TV',
+            quantity:110,
+            price:102000
+        },
+    ]
+    const u1 = document.getElementById("u1");
+
+    //traverse array
+    arr.forEach(e => {
+        const li = document.createElement("li");
+        const element=document.getElementById("u1");
+        // li.innerHTML = `ID: ${item.id}, Name: ${item.name}, Quantity: ${item.quantity}, Price: ${item.price}`;
+        li.textContent = `  ${e.name} has quantity ${e.quantity}`;
+        u1.appendChild(li);
+    });
+    
+  //for in-for all-for each loops
+
+</script>
+
+</body>
+</html>

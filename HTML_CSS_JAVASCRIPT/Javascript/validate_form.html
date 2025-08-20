@@ -1,0 +1,149 @@
+<!-- regex is itself a object
+ <!-- *-0 or more occurences of the preceding element and + checks 1 or more occurences of the preceding element  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+</head>
+<body>
+<div class="container">
+    <h2>Registration form</h2>
+    <form id="registration-form">
+        <div class="form-group">
+            <label for="fname">Full Name:</label>   
+            <input type="text" id="fname" name="fname" placeholder="Enter your full name"><br><br>
+            <span class="error" id="fnameError"></span>
+        </div>
+        <div class="form-group">
+            <label for="studentid">Student ID:</label> 
+            <input type="text" id="studentid" name="studentid" placeholder="Enter your student ID"><br><br>
+            <span class="error" id="studentidError"></span>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label> 
+            <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+            <span class="error" id="emailError"></span>
+        </div>
+         <div class="form-group">
+      <button type="submit">Register</button>
+        </div>
+  </form>
+
+  <div id="output" class="output"></div>
+</div> 
+
+    <!-- <script>
+        const form = document.getElementById("registration-form");
+
+        const fname = document.getElementById("fname");
+        const studentid=document.getElementById("studentid");
+        const email=document.getElementById("email");
+
+        const fnameError = document.getElementById("fnameError");
+        const studentidError = document.getElementById("studentidError");
+        const emailError = document.getElementById("emailError");
+
+        //Regex Expressions
+        const str= /^[a-zA-Z\s]+$/;
+        const number=/^[0-9]{10}$/;
+        const alphanum=/^[a-zA-Z0-9]+$/;
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            let valid = true;
+
+            // Validate Full Name
+            if (!str.test(fname.value)) {
+                fnameError.textContent = "Please enter a valid name.";
+                valid = false;
+            } else {
+                fnameError.textContent = "";
+            }
+
+            // Validate Student ID
+            if (!alphanum.test(studentid.value)) {
+                studentidError.textContent = "Please enter a valid student ID.";
+                valid = false;
+            } else {
+                studentidError.textContent = "";
+            }
+
+            // Validate Email
+            if (!email.value.includes("@")) {
+                emailError.textContent = "Please enter a valid email address.";
+                valid = false;
+            } else {
+                emailError.textContent = "";
+            }
+
+            if (valid) {
+                document.getElementById("output").innerHTML = `
+                    <h3>Registration Successful!</h3>
+                    <p>Full Name: ${fname.value}</p>
+                    <p>Student ID: ${studentid.value}</p>
+                    <p>Email: ${email.value}</p>
+                `;
+            }
+            
+        });
+    </script> -->
+
+<!-- //display details in next page display.html -->
+ <script>
+    const form = document.getElementById("registration-form");
+
+    const fname = document.getElementById("fname");
+    const studentid = document.getElementById("studentid");
+    const email = document.getElementById("email");
+
+    const fnameError = document.getElementById("fnameError");
+    const studentidError = document.getElementById("studentidError");
+    const emailError = document.getElementById("emailError");
+
+    const str = /^[a-zA-Z\s]+$/;
+    const alphanum = /^[a-zA-Z0-9]+$/;
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        let valid = true;
+
+        // Validate Full Name
+        if (!str.test(fname.value)) {
+            fnameError.textContent = "Please enter a valid name.";
+            valid = false;
+        } else {
+            fnameError.textContent = "";
+        }
+
+        // Validate Student ID
+        if (!alphanum.test(studentid.value)) {
+            studentidError.textContent = "Please enter a valid student ID.";
+            valid = false;
+        } else {
+            studentidError.textContent = "";
+        }
+
+        // Validate Email
+        if (!email.value.includes("@")) {
+            emailError.textContent = "Please enter a valid email address.";
+            valid = false;
+        } else {
+            emailError.textContent = "";
+        }
+
+        if (valid) {
+            // 🌟 Store data in localStorage
+            localStorage.setItem("fullName", fname.value);
+            localStorage.setItem("studentID", studentid.value);
+            localStorage.setItem("email", email.value);
+
+            // 🚀 Redirect to display.html
+            window.location.href = "display.html";
+        }
+    });
+</script>
+</body>
+</html>
+ 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Magic ✨</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 50px;
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #f0f8ff;
+    }
+
+    #myHeading {
+      color: purple;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      background: #ffa500;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #ff6347;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="myHeading"> Hello, DOM !</h1>
+
+  <button onclick="changeText()">Change Text 📝</button>
+  <button onclick="changeColor()">Change Color 🎨</button>
+  <button onclick="addPara()">Add Paragraph ➕</button>
+
+  <div id="container"></div>
+
+  <script>
+    // Function to change heading text
+    function changeText() {
+      document.getElementById("myHeading").innerText = "🎉 You clicked the button!";
+    }
+
+    // Function to change heading color
+    function changeColor() {
+      document.getElementById("myHeading").style.color = "green";
+    }
+
+    // Function to add a new paragraph
+    function addPara() {
+      const newPara = document.createElement("p");
+      newPara.innerText = " This paragraph was added using DOM!";
+      newPara.style.color = "blue";
+      newPara.style.fontSize = "18px";
+
+      document.getElementById("container").appendChild(newPara);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Parse + forEach Example</title>
+</head>
+<body>
+  <ul id="u1"></ul>
+
+  <script>
+    // JSON string (like data coming from API or file)
+    const jsonString = `
+      [
+        { "id":101, "name":"Mobile", "quantity":100, "price":100000 },
+        { "id":102, "name":"TV", "quantity":110, "price":102000 }
+      ]
+    `;
+
+    // Parse JSON string -> JavaScript array of objects
+    const arr = JSON.parse(jsonString);
+
+    const u1 = document.getElementById("u1");
+
+    // Loop over parsed objects
+    arr.forEach((item) => {
+      const li = document.createElement("li");
+      li.textContent = `${item.name} has quantity ${item.quantity}`;
+      u1.appendChild(li);
+    });
+  </script>
+</body>
+</html>
