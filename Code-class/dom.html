@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h3 id="head">Today date is: </h3>
+    <button id="btnClick">Click Me</button>
+
+    <button id="btnAdd">Add</button>
+    <button id="btnRemove">Remove</button>
+
+    <script>
+        const h = document.getElementById('head');
+        const btn = document.getElementById('btnClick');
+        const btn1 = document.getElementById('btnAdd');
+        const btn2 = document.getElementById('btnRemove');
+        
+        btn.addEventListener("click", function(){
+            h.textContent = `Today date is ${Date(Date.now)}`;
+        });
+    // Add Element
+    //var p;
+    btn1.addEventListener('click', function() {
+        var p = document.createElement('p');
+        p.setAttribute('id', 'p1');
+        p.className = 'p1';
+        p.innerText = "This is paragram dynamically generated..";
+        document.body.appendChild(p);
+    });
+
+    //Remove element
+    // Add Element
+    btn2.addEventListener('click', () => {
+        const para = document.querySelectorAll('.p1');
+        // para.forEach(p => p.remove());
+        if(para.length > 0){
+            const cnt = para[para.length - 1];
+            cnt.remove();
+        } 
+    });
+
+    </script>
+</body>
+</html>

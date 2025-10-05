@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Form Validation</h2>
+        <p id="p"></p>
+        <input type="text" id="txtname" placeholder="Input Name"/><span id="s"></span><br/><br/>
+        <input id="txtphone" type="text" placeholder="Input 10 digit Number"/><span id="s1"></span><br/><br/>
+        <input type="button" id="btn" value="Click Me"/><br/> 
+    <script>
+        var txtname = document.getElementById('txtname');
+        var txtphone = document.getElementById('txtphone');
+        var button = document.getElementById('btn');
+
+        //reg pattern
+        var str = /[a-zA-Z]+$/;
+        var num = /^[0-9]{10}$/;
+        var alphnum = /[a-zA-Z0-9]+$/;
+
+        // event listener
+        function val(){
+
+        }
+        button.addEventListener("click", function(){
+            if(!str.test(txtname.value)){
+                document.getElementById('s').style.color = 'red';
+                document.getElementById('s').innerHTML = '*Invalid Input';
+                txtname.focus();
+                return false;
+            }
+            //else if()
+        })
+
+
+
+       
+    </script>
+</body>
+</html>

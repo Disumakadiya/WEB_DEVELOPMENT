@@ -1,0 +1,91 @@
+/* Base Page */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #333;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+/* Section Boxes */
+section {
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+  margin-top: 0;
+  color: #444;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+/* Events List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #f9f9f9;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 5px solid #2575fc;
+  font-weight: 500;
+}
+
+/* Student Cards */
+.student {
+  display: flex;
+  justify-content: space-between;
+  background: #fafafa;
+  padding: 12px 16px;
+  margin: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.student:hover {
+  transform: scale(1.02);
+  background: #f0f7ff;
+}
+
+/* Pagination */
+#pagination {
+  text-align: center;
+  margin-top: 15px;
+}
+
+button {
+  margin: 3px;
+  padding: 8px 14px;
+  border: none;
+  background: #2575fc;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #6a11cb;
+}
+
+button.active {
+  background: orange;
+}

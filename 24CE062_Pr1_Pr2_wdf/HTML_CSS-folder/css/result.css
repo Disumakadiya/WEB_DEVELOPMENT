@@ -1,0 +1,122 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #eaf5ff;
+  color: #002855;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #002855;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  text-align: center;
+  position: relative;
+}
+
+header img {
+  height: 60px;
+  position: absolute;
+  left: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Navbar */
+nav {
+  background-color: #004080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+}
+
+nav .left-anim {
+  font-size: 1.2rem;
+  color: gold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+nav .menu-links {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* Results Section */
+.result-container {
+  display: grid;
+  height: 90%;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 0.2fr));
+  /* gap: 15px; */
+  padding: 20px;
+  flex-grow: 1;
+}
+.result-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px; /* You can decrease this if needed */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #004080;
+  margin-bottom: 10px; /* ⬅️ Decrease this for less bottom gap */
+  /* Let content decide height */
+}
+
+.result-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 1px;
+  border-left: 6px solid #004080;
+    height:40%;
+    width:90%;
+}
+
+.result-card h2 {
+  color: #002855;
+  margin-bottom: 3px;
+}
+
+.result-card p {
+  font-size: 0.95rem;
+  margin: 2px 0;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #002855;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  margin-top: auto;
+}

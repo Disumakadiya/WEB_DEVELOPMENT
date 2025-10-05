@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid Layout Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f8ff;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #0077b6;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .container 
+    {
+      display: grid;
+      /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+      /* grid-template-columns: repeat(3,1fr); */
+      grid-template-columns: 1fr 1fr 1fr;
+      /* 1fr 2fr 100px */
+      /* grid-template-rows: repeat(2, 1fr);by default row vise */
+      /* gap: 1rem; */
+      gap:20px;
+      grid-auto-rows:minmax(200px,auto);
+      padding: 2rem;
+    }
+
+    .box {
+      background-color: #90e0ef;
+      border: 2px solid #0077b6;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      background-color: #48cae4;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <header> Welcome to My Grid Layout</header>
+
+  <main class="container">
+    <div class="box">Div 1 🧊</div>
+    <div class="box">Div 2 🌈</div>
+    <div class="box">Div 3 🚀</div>
+    <div class="box">Div 4 🐱‍👓</div>
+    <div class="box">Div 5 💻</div>
+    <div class="box">Div 6 🎨</div>
+    <div class="box">Div 7 📚</div>
+  </main>
+
+  <footer> using CSS Grid</footer>
+</div>
+
+</body>
+</html>

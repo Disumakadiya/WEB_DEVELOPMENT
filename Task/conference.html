@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #181c2f 60%, #2e0b4f 100%);
+      min-height: 100vh;
+      color: #f3f3f3;
+    }
+    .container {
+      max-width: 480px;
+      margin: 48px auto;
+      background: rgba(30, 30, 60, 0.95);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      padding: 36px 28px 28px 28px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      background: linear-gradient(90deg, #ffb347, #00e6e6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 24px;
+      text-shadow: 1px 1px 8px #000a;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    label {
+      font-weight: 700;
+      color: #ffb347;
+      margin-bottom: 4px;
+      letter-spacing: 0.5px;
+    }
+    input {
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1.08rem;
+      background: #23234a;
+      color: #00e6e6;
+      font-weight: 600;
+      outline: none;
+      margin-bottom: 2px;
+      transition: box-shadow 0.2s;
+    }
+    input:focus {
+      box-shadow: 0 0 0 2px #00e6e6;
+    }
+    .error {
+      color: #ff4d6d;
+      font-size: 0.98rem;
+      margin-top: -10px;
+      margin-bottom: 6px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+    button {
+      background: linear-gradient(90deg, #00e6e6, #ffb347);
+      color: #181c2f;
+      font-weight: 900;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 0;
+      margin-top: 10px;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #ffb347, #00e6e6);
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 18px 4px;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Registration</h1>
+    <form id="studentForm" autocomplete="off" novalidate>
+      <div>
+        <label for="fullname">Student Full Name</label>
+        <input type="text" id="fullname" name="fullname" required>
+        <div class="error" id="fullnameError"></div>
+      </div>
+      <div>
+        <label for="studentid">Student ID</label>
+        <input type="text" id="studentid" name="studentid" required>
+        <div class="error" id="studentidError"></div>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <div class="error" id="emailError"></div>
+      </div>
+      <div>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+        <div class="error" id="usernameError"></div>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <div class="error" id="passwordError"></div>
+      </div>
+      <div>
+        <label for="confirmpass">Confirm Password</label>
+        <input type="password" id="confirmpass" name="confirmpass" required>
+        <div class="error" id="confirmpassError"></div>
+      </div>
+      <div>
+        <label for="phone">Phone No.</label>
+        <input type="text" id="phone" name="phone" required maxlength="10">
+        <div class="error" id="phoneError"></div>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+  <script src="validation_form.js"></script>
+</body>
+</html> 

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annual Tech Conference 2024</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #181c2f 60%, #2e0b4f 100%);
+      min-height: 100vh;
+      color: #f3f3f3;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: rgba(30, 30, 60, 0.95);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      padding: 32px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .header {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .header h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #ffb347, #00e6e6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin: 0;
+      text-shadow: 1px 1px 8px #000a;
+    }
+    .header p {
+      font-size: 1.3rem;
+      color: #ffe6fa;
+      margin-top: 8px;
+      font-weight: 600;
+      text-shadow: 1px 1px 6px #000a;
+    }
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      background: rgba(0, 230, 230, 0.10);
+      border-radius: 12px;
+      padding: 20px;
+      border-left: 6px solid #ffb347;
+      font-size: 1.15rem;
+    }
+    .details span {
+      font-weight: 700;
+      color: #ffb347;
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+    }
+    .venue {
+      background: #ffb347;
+      color: #181c2f;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      box-shadow: 0 2px 8px rgba(0, 230, 230, 0.15);
+      margin-bottom: 8px;
+      display: inline-block;
+      letter-spacing: 0.5px;
+    }
+    .time {
+      background: #00e6e6;
+      color: #181c2f;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      box-shadow: 0 2px 8px rgba(255, 179, 71, 0.15);
+      margin-bottom: 8px;
+      display: inline-block;
+      letter-spacing: 0.5px;
+    }
+    .agenda {
+      grid-column: 1 / -1;
+      margin-top: 24px;
+      background: rgba(255, 179, 71, 0.10);
+      border-radius: 12px;
+      padding: 24px 18px;
+    }
+    .agenda h2 {
+      color: #00e6e6;
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+      font-weight: 800;
+      text-shadow: 1px 1px 6px #000a;
+    }
+    .agenda-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .agenda-item {
+      background: #23234a;
+      color: #ffb347;
+      border-left: 5px solid #00e6e6;
+      border-radius: 8px;
+      padding: 16px 18px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(0, 230, 230, 0.08);
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .agenda-item b {
+      color: #00e6e6;
+      font-size: 1.1rem;
+    }
+    .speakers {
+      margin-top: 32px;
+      grid-column: 1 / -1;
+      background: rgba(0, 230, 230, 0.10);
+      border-radius: 12px;
+      padding: 24px 18px;
+    }
+    .speakers h2 {
+      color: #ffb347;
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+      font-weight: 800;
+      text-shadow: 1px 1px 6px #000a;
+    }
+    .speaker-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+    .speaker {
+      background: #23234a;
+      color: #00e6e6;
+      border-radius: 8px;
+      padding: 16px 18px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(255, 179, 71, 0.08);
+      flex: 1 1 220px;
+      min-width: 180px;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    a {
+      color: #00e6e6;
+      text-decoration: underline;
+      font-weight: 700;
+    }
+    @media (max-width: 800px) {
+      .container {
+        grid-template-columns: 1fr;
+        padding: 18px 6px;
+      }
+      .agenda-list {
+        grid-template-columns: 1fr;
+      }
+      .speaker-list {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Annual Tech Conference 2024</h1>
+      <p>Join us for a day of innovation, networking, and inspiration!</p>
+    </div>
+    <div class="details">
+      <div><span>Date:</span> <span class="time">March 15, 2024</span></div>
+      <div><span>Time:</span> <span class="time">9:00 AM - 6:00 PM</span></div>
+      <div><span>Venue:</span> <span class="venue">Grand Convention Center, Downtown City</span></div>
+      <div><span>Address:</span> 123 Innovation Road, Downtown City, 456789</div>
+      <div><span>Contact:</span> <a href="mailto:info@techconf.com">info@techconf.com</a></div>
+    </div>
+    <div class="agenda">
+      <h2>Conference Agenda</h2>
+      <div class="agenda-list">
+        <div class="agenda-item"><b>09:00 AM</b> - Registration & Welcome Breakfast</div>
+        <div class="agenda-item"><b>10:00 AM</b> - Keynote: The Future of AI</div>
+        <div class="agenda-item"><b>11:00 AM</b> - Panel: Women in Tech</div>
+        <div class="agenda-item"><b>12:00 PM</b> - Networking Session</div>
+        <div class="agenda-item"><b>01:00 PM</b> - Lunch Break</div>
+        <div class="agenda-item"><b>02:00 PM</b> - Workshop: Cloud Computing</div>
+        <div class="agenda-item"><b>03:30 PM</b> - Talk: Cybersecurity Trends</div>
+        <div class="agenda-item"><b>04:30 PM</b> - Closing Remarks & Awards</div>
+      </div>
+    </div>
+    <div class="speakers">
+      <h2>Featured Speakers</h2>
+      <div class="speaker-list">
+        <div class="speaker">Dr. Jane Smith - AI Researcher</div>
+        <div class="speaker">Mr. John Doe - Cloud Architect</div>
+        <div class="speaker">Ms. Priya Patel - Cybersecurity Expert</div>
+        <div class="speaker">Mr. Alex Lee - Tech Entrepreneur</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

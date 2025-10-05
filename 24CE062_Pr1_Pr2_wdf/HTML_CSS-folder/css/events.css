@@ -1,0 +1,189 @@
+/* 🌐 GLOBAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #eaf5ff;
+  color: #002855;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔼 HEADER */
+header {
+  background-color: #002855;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  text-align: center;
+  position: relative;
+}
+
+header img {
+  height: 60px;
+  position: absolute;
+  left: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* 📋 NAVBAR */
+nav {
+  background-color: #004080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+}
+
+nav .left-anim {
+  font-size: 1.2rem;
+  color: gold;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.menu-links {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  position: relative;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+/* 🗓️ EVENTS SECTION */
+.event-main {
+  padding: 40px;
+  flex-grow: 1;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #002855;
+  margin-bottom: 30px;
+}
+
+/* 🎯 EVENT GRID */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* 📦 EVENT CARD */
+.event-card {
+  display: grid;
+  grid-template-rows: 180px auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.event-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-info {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  padding: 20px;
+  gap: 8px;
+}
+
+.event-info h3 {
+  font-size: 1.3rem;
+  color: #002855;
+}
+
+.event-info p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* 🏷️ TAGS */
+.tag-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, auto));
+  gap: 6px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.upcoming-tag { background-color: #d4edda; color: #155724; }
+.past-tag     { background-color: #f8d7da; color: #721c24; }
+.tech-tag     { background-color: #d1ecf1; color: #0c5460; }
+.cultural-tag { background-color: #fff3cd; color: #856404; }
+.sports-tag   { background-color: #e2e3ff; color: #383d7c; }
+
+/* 🔘 BUTTON */
+.btn {
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #002855;
+}
+
+/* 🔽 FOOTER */
+footer {
+  background-color: #002855;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  margin-top: auto;
+}
