@@ -1,0 +1,48 @@
+/* 🧽 Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5faff;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 🎯 Container Flexbox Styling */
+.container {
+  display: flex;                  /* Enables Flexbox */
+  flex-direction: row;            /* Default: row */
+  justify-content: space-evenly;  /* Distribute items evenly */
+  align-items: center;            /* Vertically center items */
+  height: 200px;                  /* Give some height to center vertically */
+  border: 3px dashed #0077b6;
+  margin-top: 50px;
+  background-color: #e0f7fa;
+  border-radius: 12px;
+}
+
+/* Items Styling */
+.item {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+}
+
+/* 🎨 Different Colors */
+.item:nth-child(1) { background-color: #ef476f; }
+.item:nth-child(2) { background-color: #ffd166; color: #333; }
+.item:nth-child(3) { background-color: #06d6a0; }
+.item:nth-child(4) { background-color: #118ab2; }
+.item:nth-child(5) { background-color: #8338ec; }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #delay
+        {
+              border-style:solid;
+              border-width:1px;
+              display:block;
+              width:100px;
+              height:100px;
+              background-color: aqua;
+              transition:
+                width 2s,
+                height 2s,
+                background-color 2s,
+                /* scale 2s, */
+                /* translate 2s; */
+                /* skew 2s; */
+                 /* //2d */
+                /* rotate 2s, */
+        }
+        #delay:hover
+        {
+            background-color:blueviolet;
+            width:200px;
+            height:200px;
+            /* rotate:360deg; */
+            transform:translate(50px,50%);
+        }
+    </style>
+</head>
+<body>
+    <div  id ="delay">CSS TRANSITION</div>
+    <p></p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+</head>
+<body>
+  <h1>My To-Do List</h1>
+  <input type="text" id="taskInput" placeholder="Enter a new task" />
+  <button id="addBtn">Add Task</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+  document.getElementById("addBtn").addEventListener("click", function () {
+  const input = document.getElementById("taskInput");
+  const taskText = input.value.trim();
+
+  if (taskText !== "") {
+    const li = document.createElement("li");
+    li.textContent = taskText;
+
+    // Mark as completed
+    li.addEventListener("click", function () {
+      li.style.textDecoration = li.style.textDecoration === "line-through" ? "none" : "line-through";
+    });
+
+    // Right click to delete
+    li.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+      li.remove();
+    });
+
+    document.getElementById("taskList").appendChild(li);
+    input.value = "";
+  }
+});
+</script>
+</body>
+</html>

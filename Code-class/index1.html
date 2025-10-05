@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=""></script>
+</head>
+<body>
+    <h3>User Registration</h3>
+      <div>
+        <fieldset style="width: 200px;">
+          <legend>Registration</legend>
+        <form action="" method="post" onsubmit="saveData(event)">
+          <input type="text" id="fname" placeholder="Enter First Name" /><span id="err"></span><br/><br/>
+          <input type="text" id="lname" placeholder="Enter Last Name" /><br/><br/>
+          <input type="text" id="uname" placeholder="Enter UserName" /><br/><br/>
+          <input type="password" id="psw" placeholder="Enter Password" /><br/> <br>
+          <input type="password" id="cpsw" placeholder="Enter Confirmed Password" /><br/> <br>
+          <input type="submit" id="btnsingin" value="SignIn"/>
+          <input type="reset" id="btnreset" value="reset" />
+        </form>
+          </fieldset><br/><br/>
+          If Registered ? <a href="login.html">Login here</a>
+      </div>
+      <br/>
+      <div id="d1">
+
+      </div>
+
+      <script>
+        function saveData(event){
+          event.preventDefault();
+          localStorage.setItem("fname",document.getElementById('fname').value);
+          localStorage.setItem("lname",document.getElementById('lname').value);
+            // let fname = document.getElementById('fname').value;
+            // let lname = document.getElementById('lname').value;
+            // let uname = document.getElementById('uname').value;
+            // let psd = document.getElementById('psw').value;
+            // let cpsd = document.getElementById('cpsw').value;
+          window.location.href = "display.html";
+            // document.getElementById('d1').innerHTML = 'Your Full Name: ' + fname + " " + lname +
+            // "<br/> Your Username is " + uname + " for login" +
+            // "<br/> Password is sent to your registered email." 
+        }
+      </script>
+</body>
+</html>

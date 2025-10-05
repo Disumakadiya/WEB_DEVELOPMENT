@@ -1,0 +1,48 @@
+/* 🧼 Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff3e6;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+/*  Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 150px); /* 3 columns */
+  grid-template-rows: repeat(2, 150px);    /* 2 rows */
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+  background-color: #ffe5b4;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* Grid Items */
+.grid-item {
+  background-color: #ffa500;
+  border: 2px solid #333;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+/*  Unique Colors */
+.item-a { background-color: #e63946; grid-column: span 2; }
+.item-b { background-color: #f1faee; color: #333; }
+.item-c { background-color: #a8dadc; }
+.item-d { background-color: #457b9d; grid-row: span 2; }
+.item-e { background-color: #2a9d8f; }
+.item-f { background-color: #ffb703; }
+

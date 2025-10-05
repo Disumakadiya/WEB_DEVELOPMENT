@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Page</title>
+</head>
+<body>
+  <h2>Submitted Data</h2>
+  <p><strong>First Name:</strong> <span id="FName"></span></p>
+  <p><strong>Last Name:</strong> <span id="LName"></span></p>
+
+  <script>
+    document.getElementById("FName").textContent = localStorage.getItem("fname");
+    document.getElementById("LName").textContent = localStorage.getItem("lname");
+  </script>
+</body>
+</html>

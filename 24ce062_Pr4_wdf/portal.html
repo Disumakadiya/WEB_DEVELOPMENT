@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portal – Dynamic UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="portal.css" />
+</head>
+<body data-theme="light">
+  <!-- Notification Banner -->
+  <div class="notify" id="notify">
+    <div class="notify__content">
+      <span>New updates are available in the portal. Check them out!  
+        Disu Makadiya 
+        24ce062
+      </span>
+      <button class="btn btn--sm" id="notifyClose" aria-label="Close notification">✕</button>
+    </div>
+  </div>
+
+  <!-- Header / Theme Switch -->
+  <header class="header">
+    <h1 class="brand">Portal</h1>
+    <div class="header__actions">
+      <button class="btn" id="openModal">Open Popup</button>
+      <label class="theme-switch">
+        <input type="checkbox" id="themeToggle" />
+        <span class="slider" aria-hidden="true"></span>
+        <span class="theme-switch__label">Dark Mode</span>
+      </label>
+    </div>
+  </header>
+
+  <!-- Cards with animations -->
+  <section class="cards">
+    <article class="card">
+      <h3>Dashboard</h3>
+      <p>Quick stats and insights for your workspace.</p>
+      <button class="btn btn--primary">View</button>
+    </article>
+    <article class="card">
+      <h3>Reports</h3>
+      <p>Generate detailed reports with one click.</p>
+      <button class="btn btn--primary">Open</button>
+    </article>
+    <article class="card">
+      <h3>Integrations</h3>
+      <p>Connect your favorite tools and services.</p>
+      <button class="btn btn--primary">Manage</button>
+    </article>
+  </section>
+
+  <!-- Image Slider -->
+  <section class="slider" aria-label="Image Slider">
+    <button class="slider__nav slider__nav--prev" id="prevBtn" aria-label="Previous">‹</button>
+    <div class="slider__viewport">
+      <div class="slider__track" id="sliderTrack">
+        <!-- Slides injected by JS -->
+      </div>
+    </div>
+    <button class="slider__nav slider__nav--next" id="nextBtn" aria-label="Next">›</button>
+    <div class="slider__dots" id="sliderDots" role="tablist" aria-label="Slide indicators"></div>
+  </section>
+
+  <!-- FAQ (Collapsible) -->
+  <section class="faq">
+    <h2>FAQs</h2>
+    <div class="accordion" id="faq">
+      <button class="accordion__item" aria-expanded="false">
+        <span>How do I switch themes?</span>
+        <span class="chev">▾</span>
+      </button>
+      <div class="accordion__panel">
+        <p>Use the Dark Mode toggle in the header to switch between light and dark themes.</p>
+      </div>
+
+      <button class="accordion__item" aria-expanded="false">
+        <span>How do I add images to the slider?</span>
+        <span class="chev">▾</span>
+      </button>
+      <div class="accordion__panel">
+        <p>Update the image URLs in <code>portal.js</code> inside <code>sliderImages</code>.</p>
+      </div>
+
+      <button class="accordion__item" aria-expanded="false">
+        <span>How do I close the popup?</span>
+        <span class="chev">▾</span>
+      </button>
+      <div class="accordion__panel">
+        <p>Click the ✕ button or the overlay outside the popup content.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup Modal -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Portal popup">
+    <div class="modal__dialog">
+      <button class="modal__close" id="modalClose" aria-label="Close popup">✕</button>
+      <h3>Welcome to the Portal</h3>
+      <p>Here’s a quick popup with actions, information, or announcements.</p>
+      <button class="btn btn--primary">Got it</button>
+    </div>
+  </div>
+
+  <script src="portal.js"></script>
+</body>
+</html>

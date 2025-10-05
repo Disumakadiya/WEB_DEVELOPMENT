@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flex + Diagonal + Wrap</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      color: coral;
+      background-color: aqua;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    /*  Flexbox Row Section */
+    section.flex-section {
+      display: flex;
+      flex-direction: row; /* Main Axis = Row (can change to column too) */
+      flex-wrap: wrap; /* 🧻 Wrap when screen gets small */
+      justify-content: space-around;
+      gap: 20px;
+      padding: 20px;
+      background-color: #e0ffff;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    article {
+      flex: 1 1 250px;
+      padding: 15px;
+      background-color: #ffe4b5;
+      border: 2px solid #ff7f50;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px #aaa;
+      transition: transform 0.3s;
+      min-width: 200px;
+    }
+
+    article:hover {
+      transform: scale(1.05);
+      background-color: #ffdab9;
+    }
+
+    h2 {
+      color: #dc143c;
+    }
+
+    /*  Diagonal Box Layout */
+    .diagonal-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+      margin: 40px;
+    }
+
+    .box {
+      width: 250px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px #aaa;
+      background-color: #ffd700;
+      transition: transform 0.3s;
+    }
+
+    .box:nth-child(2) {
+      margin-left: 80px;
+      background-color: #90ee90;
+    }
+
+    .box:nth-child(3) {
+      margin-left: 160px;
+      background-color: #add8e6;
+    }
+
+    .box:hover {
+      transform: scale(1.05) rotate(1deg);
+    }
+
+    .diagonal-title {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 40px;
+      color: #4b0082;
+    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      section.flex-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      article {
+        width: 90%;
+      }
+
+      .box {
+        width: 90%;
+        margin-left: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1> Flexbox Layout + Wrap + Diagonal</h1>
+  </header>
+
+  <!--  Flex Layout -->
+  <section class="flex-section">
+    <article>
+      <h2>First Article</h2>
+      <p>This is the first article content.</p>
+    </article>
+
+    <article>
+      <h2>Second Article</h2>
+      <p>This is the second article content.</p>
+    </article>
+
+    <article>
+      <h2> Third Article</h2>
+      <p>This is the third article content.</p>
+    </article>
+
+    <article>
+      <h3>Fourth Article</h2>
+      <p>This is the fourth article content.</p>
+    </article>
+  </section>
+
+  <!--  Diagonal Boxes -->
+  <div class="diagonal-title"> Diagonal Box Section</div>
+  <div class="diagonal-container">
+    <div class="box"> Diagonal Box 1</div>
+    <div class="box"> Diagonal Box 2</div>
+    <div class="box"> Diagonal Box 3</div>
+  </div>
+
+</body>
+</html>
+<!-- difference between the two sections is that the first section uses flexbox to arrange articles in a row with wrapping, while the second section uses a diagonal layout with boxes that shift position based on their order in the HTML. The first section is responsive and adjusts to screen size, while the second section has fixed positions for each box. -->
+<!-- firebox developer flex css and flex box  -->

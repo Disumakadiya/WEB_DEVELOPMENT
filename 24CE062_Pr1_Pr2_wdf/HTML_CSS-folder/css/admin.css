@@ -1,0 +1,138 @@
+/* ========== GLOBAL STYLES ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #eaf5ff;
+  color: #002855;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== HEADER ========== */
+header {
+  background-color: #002855;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  position: relative;
+}
+
+header img {
+  height: 60px;
+  position: absolute;
+  left: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* ========== NAVBAR ========== */
+nav {
+  background-color: #004080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+}
+
+.left-anim {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: gold;
+}
+
+.menu-links {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* ========== ADMIN MAIN SECTION ========== */
+.admin-container {
+  padding: 40px;
+  flex-grow: 1;
+}
+
+.admin-container h2 {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+}
+
+/* 📊 STATS CARDS */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: white;
+  border-left: 6px solid #004080;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #004080;
+}
+
+/* 🎯 ACTION BUTTONS */
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.admin-btn {
+  background-color: #004080;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.admin-btn:hover {
+  background-color: #003060;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #002855;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  margin-top: auto;
+}
